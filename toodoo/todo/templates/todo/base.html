@@ -6,7 +6,7 @@ Logged in as {{ user.username }}
 
 
 <form action="{% url 'logoutuser' %}" method = "POST" >
-	{% csrf_token %}
+{% csrf_token %}
 
 
 
@@ -17,8 +17,10 @@ Logged in as {{ user.username }}
 
 {% else %}
 
-<a href = '#'>Sign up</a>
-<a href = '#'>Login </a>
+<a href = "{% url 'signupuser' %}">Sign up</a>
+
+
+<a href = "{% url 'loginusers' %}">Login </a>
 
 
 
