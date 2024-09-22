@@ -23,10 +23,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/',views.signupuser,name ='signupuser'),
     path('Logout/',views.logoutuser,name ='logoutuser'),
-    path('home',views.home,name ='home'),
+    path('',views.home,name ='home'),
     path('Login/',views.loginusers,name ='loginusers'),
     path('create/',views.createtodo,name ='createtodo'),
-
-
+    
     path('current/',views.currenttodos,name ='currenttodos'),
+    path('todo/<int:todo_pk>',views.viewtodo,name ='viewtodo'),
+    path('todo/<int:todo_pk>/complete',views.completetodo,name ='completetodo'),
+    path('todo/<int:todo_pk>/tododelete',views.tododelete,name ='tododelete'),
 ]
